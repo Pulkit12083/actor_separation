@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Check if correct number of arguments are provided
+if [ $# -ne 2 ]; then
+    echo "Usage: degrees <actor1> <actor2>"
+    echo "Example: degrees amitabh-bachchan leonardo-dicaprio"
+    exit 1
+fi
+
+# Execute the Python package with provided arguments
+python3 -m actor_separation.main "$1" "$2"
