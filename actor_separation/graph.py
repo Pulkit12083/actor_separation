@@ -39,6 +39,7 @@ def find_degrees_of_separation(person1_url, person2_url):
 
         #fetch connected people from each movie
         cast_members = []
+        #collect movie urls
         for movie in movies:
             if movie is None or movie['url'] in visited_movies:
                 continue

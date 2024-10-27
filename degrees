@@ -1,5 +1,10 @@
 #!/bin/bash
 
+python3 -m venv ~/pulkitm-degrees-venv > /dev/null 2>&1
+source ~/pulkitm-degrees-venv/bin/activate > /dev/null 2>&1
+python3 -m pip install requests > /dev/null 2>&1
+
+
 # Check if correct number of arguments are provided
 if [ $# -ne 2 ]; then
     echo "Usage: degrees <actor1> <actor2>"
@@ -8,4 +13,5 @@ if [ $# -ne 2 ]; then
 fi
 
 # Execute the Python package with provided arguments
+echo "Running the program now"
 python3 -m actor_separation.main "$1" "$2"
