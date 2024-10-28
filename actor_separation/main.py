@@ -16,8 +16,8 @@ def main():
         print("Invalid URL for Person-2")
         return
 
-    find_degrees_of_separation(args.person1_url, args.person2_url)
-
+    result = find_degrees_of_separation(args.person1_url, args.person2_url)
+    return result
 
 if __name__ == '__main__':
     main()
